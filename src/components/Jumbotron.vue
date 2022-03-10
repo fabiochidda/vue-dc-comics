@@ -1,14 +1,14 @@
 <template>
 
-        <section>
-            <div class="container ms_jumbo">
-                <div class="container-lg">
-                    <div class="current_series">
-                        <p>CURRENT SERIES</p>
-                    </div>               
-                </div>
+    <section>
+        <div class="container ms_jumbo">
+            <div class="container-lg">
+                <div class="current_series">
+                    <p>CURRENT SERIES</p>
+                </div>               
             </div>
-        </section>
+        </div>
+    </section>
 
 </template>
 
