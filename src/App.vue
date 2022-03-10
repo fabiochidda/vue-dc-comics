@@ -18,7 +18,7 @@ export default {
   components: {
     Header,
     Main,
-    Footer
+    Footer,
   }
 }
 </script>
@@ -43,6 +43,7 @@ export default {
 
 .container-lg {
   width: 1320px;
+  display: flex;
   margin: 0 auto;
 }
 

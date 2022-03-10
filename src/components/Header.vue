@@ -73,7 +73,6 @@ export default {
 <style lang="scss" scoped>
 
 .container-lg{
-    display: flex;
     min-height: 130px;
     justify-content: space-between;
 }
