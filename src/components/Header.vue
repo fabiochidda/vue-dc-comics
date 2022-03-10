@@ -1,4 +1,5 @@
 <template>
+
     <header>
         <div class="container">
             <div class="container-lg">
@@ -7,7 +8,7 @@
                 </figure>
                 <nav class="nav-container">
                     <ul class="nav">
-                        <li v-for="(el, i) in navLinks" :key="i" class="nav-links" :class=" navLinks[i].isActive ? 'active' : '' ">
+                        <li v-for="(el, i) in navLinks" :key="i" class="nav-links" :class=" el.isActive ? 'active' : '' ">
                             <a :href="el.href">{{el.text}}</a>
                         </li>
                     </ul>
@@ -15,6 +16,7 @@
             </div>
         </div>
     </header>
+    
 </template>
 
 <script>
