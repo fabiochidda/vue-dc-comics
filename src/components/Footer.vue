@@ -1,49 +1,69 @@
 <template>
     <footer>
-        <div class="container">
-            <div class="container-lg">
-                <div class="list-container">
-                    <div class="col">
-                        <ul>
-                            <li class="list-title">
-                                <h2>{{listTitleGeneral}}</h2>
-                            </li>
-                            <li v-for="(el,i) in listGeneral" :key="i">
-                                <a href="#">{{el.text}}</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li class="list-title">
-                                <h2>{{listTitleShop}}</h2>
-                            </li>
-                            <li v-for="(el,i) in listShop" :key="i">
-                                <a href="#">{{el.text}}</a>
-                            </li>
-                        </ul>
+        <section>
+            <div class="container footer">
+                <div class="container-lg">
+                    <div class="list-container">
+                        <div class="col">
+                            <ul>
+                                <li class="list-title">
+                                    <h2>{{listTitleGeneral}}</h2>
+                                </li>
+                                <li v-for="(el,i) in listGeneral" :key="i">
+                                    <a href="#">{{el.text}}</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="list-title">
+                                    <h2>{{listTitleShop}}</h2>
+                                </li>
+                                <li v-for="(el,i) in listShop" :key="i">
+                                    <a href="#">{{el.text}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li class="list-title">
+                                    <h2>{{listTitleDcTerms}}</h2>
+                                </li>
+                                <li v-for="(el,i) in listDcTerms" :key="i">
+                                    <a href="#">{{el.text}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li class="list-title">
+                                    <h2>{{listTitleSites}}</h2>
+                                </li>
+                                <li v-for="(el,i) in listSites" :key="i">
+                                    <a href="#">{{el.text}}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col">
-                        <ul>
-                            <li class="list-title">
-                                <h2>{{listTitleDcTerms}}</h2>
-                            </li>
-                            <li v-for="(el,i) in listDcTerms" :key="i">
-                                <a href="#">{{el.text}}</a>
-                            </li>
-                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container social-bar">
+                <div class="container-lg">
+                    <div class="sign">
+                        <button>SIGN-UP NOW!</button>
                     </div>
-                    <div class="col">
-                        <ul>
-                            <li class="list-title">
-                                <h2>{{listTitleSites}}</h2>
-                            </li>
-                            <li v-for="(el,i) in listSites" :key="i">
-                                <a href="#">{{el.text}}</a>
+                    <div class="social-links">
+                        <p>FOLLOW US</p>
+                        <ul class="social-list">
+                            <li v-for="(el, i) in social" :key="i">
+                                <img :src="el.imgSrc" alt="">
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </footer>
 </template>
 
@@ -138,6 +158,23 @@ export default {
                 {
                     text: 'DC Power Visa'
                 },
+            ],
+            social: [
+                {
+                    imgSrc: require('../assets/img/footer-facebook.png')
+                },
+                {
+                    imgSrc: require('../assets/img/footer-twitter.png')
+                },
+                {
+                    imgSrc: require('../assets/img/footer-youtube.png')
+                },
+                {
+                    imgSrc: require('../assets/img/footer-pinterest.png')
+                },
+                {
+                    imgSrc: require('../assets/img/footer-periscope.png')
+                },
             ]
         }
     }
@@ -146,11 +183,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.container {
+.container.footer {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    padding: 60px 0;
 }
 
 .col {
@@ -162,6 +198,11 @@ export default {
     display: flex;
     flex-grow: 1;
     gap: 15px;
+    padding: 60px 0;
+    background-image: url(../assets/img/dc-logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
 
     li {
         padding-bottom: 10px;
@@ -175,5 +216,41 @@ export default {
     a {
         color: #647177;
     }
+}
+
+.container.social-bar {
+    background-color: #303030;
+}
+
+.social-bar .container-lg {
+    justify-content: space-between;
+}
+
+.sign {
+    align-self: center;
+    button {
+        padding: 15px;
+        color: white;
+        background-color: #303030;
+        border: 2px solid #0183FB;;
+    }
+}
+
+.social-links {
+    display: flex;
+    padding: 30px 0;
+    align-items: center;
+
+    p {
+        color: #0183FB;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+}
+
+.social-list {
+    display: flex;
+    gap: 15px;
 }
 </style>
