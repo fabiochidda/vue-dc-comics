@@ -33,7 +33,7 @@ export default {
 
 .comic-card {
     width: calc(100% / 6);
-    height: 150px;
+    margin-bottom: 20px;
 
     .comic-image {
         aspect-ratio: 1/1;
@@ -41,14 +41,14 @@ export default {
         
         img {
             display: block;
-            object-fit: cover;
-            object-position: top;
         }
     }
 }
 
 .comic-title {
+
     h3 {
+        margin-top: 15px;
         text-transform: uppercase;
         color: white;
     }
